@@ -1,6 +1,6 @@
 function Duke(args) {
     this.toString = function() {
-        return 'Duke: {0}'.replace('{0}', args.name);
+        return 'Duke: "{0}"'.replace('{0}', args.name);
     };
 }
 

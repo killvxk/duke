@@ -9,11 +9,11 @@
   "description": "minimal JavaScript runtime",
   "main": "",
   "scripts": {
-    "build": "make all",
-    "clean": "make clean",
-    "debug": "npx terser | ./dist/Debug/GNU-Linux/duke",
-    "execute": "npx terser | ./dist/Release/GNU-Linux/duke",
-    "test": "exit 0"
+    "postinstall": "cmake -B build && echo",
+    "build": "make -C build",
+    "clean": "make -C build clean",
+    "start": "npx terser | ./build/duke",
+    "test": "echo true | ./build/duke"
   },
   "repository": {
     "type": "git",
